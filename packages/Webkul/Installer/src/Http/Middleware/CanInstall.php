@@ -23,8 +23,7 @@ class CanInstall
             }
         } else {
             if (! $this->isAlreadyInstalled()) {
-                // return redirect()->route('installer.index');
-                return $next($request);
+                return redirect()->route('installer.index');
             }
         }
 
