@@ -36,12 +36,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
+        ParallelTesting::setUpTestDatabase(function (string $database, int $token) {
+            Artisan::call('db:seed');
+        });
+
         if (config('app.env') === 'production') {
             \Illuminate\Support\Facades\URL::forceScheme('https');
         }
 
-        ParallelTesting::setUpTestDatabase(function (string $database, int $token) {
-            Artisan::call('db:seed');
-        });
     }
 }
