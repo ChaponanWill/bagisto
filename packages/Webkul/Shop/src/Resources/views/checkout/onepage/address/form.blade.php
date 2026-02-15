@@ -171,12 +171,7 @@
                             @lang('shop::app.checkout.onepage.address.select-country')
                         </option>
 
-                        <option
-                            v-for="country in countries"
-                            :value="country.code"
-                        >
-                            @{{ country.name }}
-                        </option>
+                        <option value="PE">Perú</option>
                     </x-shop::form.control-group.control>
 
                     <x-shop::form.control-group.error ::name="controlName + '.country'" />

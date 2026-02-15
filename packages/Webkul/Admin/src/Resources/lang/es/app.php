@@ -4709,7 +4709,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Desarrollado por :bagisto, un proyecto de código abierto de :webkul.',
+                'description' => '@2026',
             ],
         ],
 
